@@ -1,5 +1,0 @@
-[server]
-maxUploadSize=2048
-
-[app]
-session_timeout = 600
