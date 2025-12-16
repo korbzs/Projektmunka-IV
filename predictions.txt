@@ -247,3 +247,26 @@
 2025-12-16 00:43:33 | Korb_Zsombor_Gyula_27052025_011019_CS (1).jpg | No DR
 2025-12-16 00:49:03 | Korb_Zsombor_Gyula_27052025_011019_CS (1).jpg | No DR
 2025-12-16 00:49:15 | nyelvvizsga_merged.jpg | Mild DR
+2025-12-16 01:32:13 | 016-1030x745.jpg | Mild DR
+2025-12-16 01:32:48 | retina-1-1200x675.jpg | Proliferative DR
+2025-12-16 01:34:54 | retina-1-1200x675.jpg | Proliferative DR
+2025-12-16 01:35:21 | DiabetRetinopathy-1.jpg | Moderate DR
+2025-12-16 01:36:04 | DiabetRetinopathy-1.jpg | Moderate DR
+2025-12-16 01:36:36 | DiabetRetinopathy-1.jpg | Moderate DR
+2025-12-16 01:37:32 | DiabetRetinopathy-1.jpg | Moderate DR
+2025-12-16 01:37:41 | DiabetRetinopathy-1.jpg | Moderate DR
+2025-12-16 01:38:29 | DiabetRetinopathy-1.jpg | Moderate DR
+2025-12-16 01:38:54 | DiabetRetinopathy-1.jpg | Moderate DR
+2025-12-16 01:39:09 | 28462-1721235645162-720x420.jpg | Moderate DR
+2025-12-16 01:39:17 | 8cee32a2-6125-4f54-a8bb-64c4b36cfa43.jpg | Severe DR
+2025-12-16 01:39:48 | The-Role-of-Education-and-Communication-in-Diabetic-Retinopathy-Hero@2x-370x209.jpg | Moderate DR
+2025-12-16 01:40:07 | diab-retinopathy-Image001.jpg | No DR
+2025-12-16 01:40:36 | diabetic-rethonopaty-1200x675.jpg | No DR
+2025-12-16 01:40:41 | download.jpg | Mild DR
+2025-12-16 01:40:49 | download.jpg | Moderate DR
+2025-12-16 01:40:55 | download.jpg | Severe DR
+2025-12-16 01:41:01 | download.jpg | No DR
+2025-12-16 01:41:05 | download.jpg | Severe DR
+2025-12-16 01:41:11 | download.jpg | Severe DR
+2025-12-16 01:41:16 | download.jpg | Severe DR
+2025-12-16 01:42:08 | Korb_Zsombor_Gyula_27052025_011019_CS (1).jpg | No DR

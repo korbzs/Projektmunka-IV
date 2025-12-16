@@ -144,10 +144,10 @@ st.markdown("""
     }
 
     .image-preview {
-        background: #1e293b;
+        background: #334155;
         border-radius: 12px;
-        padding: clamp(8px, 2vw, 12px);
-        margin: clamp(8px, 1.5vh, 12px) 0;
+        padding: 20px;
+        margin: 0;
         text-align: center;
     }
 
@@ -190,6 +190,15 @@ st.markdown("""
     .stButton {
         margin-top: clamp(10px, 2vh, 15px);
     }
+
+    [data-testid="column"] {
+        vertical-align: top;
+    }
+
+    div[data-testid="stFileUploader"],
+    .image-preview {
+        margin-top: 0 !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -224,18 +233,20 @@ def load_vit():
         st.error(f"Failed to load model: {str(e)}")
         return None, None
 
-uploaded_file = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"], key="uploader")
+col1, col2 = st.columns([1, 1])
+
+with col1:
+    uploaded_file = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"], key="uploader")
 
 if uploaded_file:
     try:
         img = Image.open(uploaded_file).convert("RGB")
-    try:
-        img = Image.open(uploaded_file).convert("RGB")
 
-        st.markdown('<div class="image-preview">', unsafe_allow_html=True)
-        st.markdown("<p style='color: #94a3b8; font-size: 0.85rem; margin-bottom: 10px;'>Uploaded Image</p>", unsafe_allow_html=True)
-        st.image(img, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
+        with col2:
+            # st.markdown('<div class="image-preview">', unsafe_allow_html=True)
+            # st.markdown("<p style='color: #94a3b8; font-size: 0.85rem; margin-bottom: 10px;'>Uploaded Image</p>", unsafe_allow_html=True)
+            st.image(img, use_container_width=True)
+            # st.markdown('</div>', unsafe_allow_html=True)
 
         labels = {
             0: "No DR",
@@ -257,29 +268,28 @@ if uploaded_file:
         if processor is None or model is None:
             st.error("Model not loaded. Cannot make prediction.")
         else:
-            if st.button("🔍 Analyze"):
+            try:
+                with st.spinner("Analyzing image..."):
+                    inputs = processor(images=img, return_tensors="pt")
+                    with torch.no_grad():
+                        output = model(**inputs)
+                        class_idx = torch.argmax(output.logits, dim=1).item()
+
+                result_color = label_colors[class_idx]
+                st.markdown(f"""
+                    <div class="result-box" style='border-left-color: {result_color};'>
+                    <p style='color: #94a3b8; font-size: 0.85rem; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;'>Diagnosis</p>
+                    <h2 style='color: {result_color}; font-size: 1.8rem; margin: 0; font-weight: 700;'>{labels[class_idx]}</h2>
+                    </div>
+                """, unsafe_allow_html=True)
+
+                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 try:
-                    with st.spinner("Analyzing image..."):
-                        inputs = processor(images=img, return_tensors="pt")
-                        with torch.no_grad():
-                            output = model(**inputs)
-                            class_idx = torch.argmax(output.logits, dim=1).item()
-
-                    result_color = label_colors[class_idx]
-                    st.markdown(f"""
-                        <div class="result-box" style='border-left-color: {result_color};'>
-                        <p style='color: #94a3b8; font-size: 0.85rem; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;'>Diagnosis</p>
-                        <h2 style='color: {result_color}; font-size: 1.8rem; margin: 0; font-weight: 700;'>{labels[class_idx]}</h2>
-                        </div>
-                    """, unsafe_allow_html=True)
-
-                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    try:
-                        with open("predictions.txt", "a") as f:
-                            f.write(f"{timestamp} | {uploaded_file.name} | {labels[class_idx]}\n")
-                    except Exception as e:
-                        st.warning(f"Prediction successful but failed to log: {str(e)}")
+                    with open("predictions.txt", "a") as f:
+                        f.write(f"{timestamp} | {uploaded_file.name} | {labels[class_idx]}\n")
                 except Exception as e:
-                    st.error(f"Prediction failed: {str(e)}")
+                    st.warning(f"Prediction successful but failed to log: {str(e)}")
+            except Exception as e:
+                st.error(f"Prediction failed: {str(e)}")
     except Exception as e:
         st.error(f"Failed to process image: {str(e)}")
