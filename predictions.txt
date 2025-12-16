@@ -216,3 +216,34 @@
 2025-12-05 00:11:09 | 17221_right.jpeg | 4 - Proliferative DR
 2025-12-05 00:11:12 | 9311_left.jpeg | 2 - Moderate
 2025-12-05 00:14:11 | 8681_right.jpeg | 4 - Proliferative DR
+2025-12-05 00:47:29 | inbound74446299845580266.jpg | 0 - No DR
+2025-12-05 00:48:34 | inbound3496105154395116988.jpg | 3 - Severe
+2025-12-05 01:00:49 | 937edd83-8a27-4a08-82de-5a0ff39921bc.jpeg | 2 - Moderate
+2025-12-05 01:01:26 | 937edd83-8a27-4a08-82de-5a0ff39921bc.jpeg | 2 - Moderate
+2025-12-10 14:26:19 | 2767_left.jpeg | 2 - Moderate
+2025-12-10 14:26:22 | 3287_right.jpeg | 2 - Moderate
+2025-12-10 14:26:32 | 22502_right.jpeg | 3 - Severe
+2025-12-10 14:26:36 | 23244_left.jpeg | 0 - No DR
+2025-12-10 14:26:39 | 25650_left.jpeg | 0 - No DR
+2025-12-10 14:26:42 | 30925_left.jpeg | 2 - Moderate
+2025-12-10 14:26:46 | 34445_left.jpeg | 2 - Moderate
+2025-12-10 14:26:49 | 36190_left.jpeg | 2 - Moderate
+2025-12-10 14:26:53 | 43223_left.jpeg | 2 - Moderate
+2025-12-10 14:26:59 | 36190_right.jpeg | 3 - Severe
+2025-12-10 14:27:04 | 24656_left.jpeg | 0 - No DR
+2025-12-10 14:27:10 | 16624_left.jpeg | 1 - Mild
+2025-12-10 14:27:14 | 2496_right.jpeg | 2 - Moderate
+2025-12-15 23:05:33 | download.jpg | 0 - No DR
+2025-12-15 23:06:54 | images.jpg | 3 - Severe
+2025-12-15 23:08:01 | images.jpg | 3 - Severe
+2025-12-15 23:08:06 | images.jpg | 0 - No DR
+2025-12-15 23:08:11 | images.jpg | 3 - Severe
+2025-12-15 23:08:17 | images.jpg | 2 - Moderate
+2025-12-15 23:29:41 | mzp_king.jpg | 2 - Moderate
+2025-12-16 00:16:37 | mzp_king.jpg | 2 - Moderate
+2025-12-16 00:26:25 | Korb_Zsombor_Gyula_27052025_011019_CS (1).jpg | No DR
+2025-12-16 00:38:53 | Korb_Zsombor_Gyula_27052025_011019_CS (1).jpg | No DR
+2025-12-16 00:42:58 | absolute-cinema-v0-d2wig7n6p5be1.jpg | No DR
+2025-12-16 00:43:33 | Korb_Zsombor_Gyula_27052025_011019_CS (1).jpg | No DR
+2025-12-16 00:49:03 | Korb_Zsombor_Gyula_27052025_011019_CS (1).jpg | No DR
+2025-12-16 00:49:15 | nyelvvizsga_merged.jpg | Mild DR
