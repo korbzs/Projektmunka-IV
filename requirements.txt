@@ -1,6 +1,7 @@
 streamlit
 Pillow
-torch
-torchvision
-transformers
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.30.0
 python-dotenv
+numpy
