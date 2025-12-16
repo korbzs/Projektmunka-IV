@@ -1,3 +1,6 @@
+import logging
+import sys
+
 import streamlit as st
 from PIL import Image
 import torch
@@ -224,6 +227,8 @@ def load_vit():
 uploaded_file = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"], key="uploader")
 
 if uploaded_file:
+    try:
+        img = Image.open(uploaded_file).convert("RGB")
     try:
         img = Image.open(uploaded_file).convert("RGB")
 
